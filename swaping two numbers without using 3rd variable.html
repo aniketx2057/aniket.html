@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Swap Numbers</title>
+</head>
+<body>
+
+
+
+<script>
+ {
+    let a = parseFloat(prompt("Enter first number:"));
+    let b = parseFloat(prompt("Enter second number:"));
+
+    alert("Before Swap:\nA = " + a + "\nB = " + b);
+
+    // swap without third variable
+    a = a + b;
+    b = a - b;
+    a = a - b;
+
+    alert("After Swap:\nA = " + a + "\nB = " + b);
+}
+</script>
+
+</body>
+</html>

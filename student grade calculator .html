@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grade Calculator</title>
+</head>
+<body>
+
+<h2>Student Grade Calculator</h2>
+<button onclick="grade()">Check Grade</button>
+
+<script>
+{
+    let marks = parseInt(prompt("Enter marks (0-100):"));
+    let result;
+
+    if (marks >= 90 && marks <= 100) result = "A+";
+    else if (marks >= 80) result = "A";
+    else if (marks >= 70) result = "B";
+    else if (marks >= 60) result = "C";
+    else if (marks >= 50) result = "D";
+    else if (marks >= 0) result = "Fail";
+    else {
+        alert("Invalid Marks");
+        return;
+    }
+
+    alert("Grade: " + result);
+}
+</script>
+
+</body>
+</html>

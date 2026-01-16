@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI Calculator</title>
+</head>
+<body>
+
+<h2>BMI Calculator</h2>
+<button onclick="calculateBMI()">Calculate BMI</button>
+
+<script>
+function calculateBMI() {
+
+    let weight = parseFloat(prompt("Enter weight in KG (example: 60):"));
+    let height = parseFloat(prompt("Enter height in METERS (example: 1.65):"));
+
+    if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
+        alert("Please enter valid numbers!");
+        return;
+    }
+
+    let bmi = weight / (height * height);
+    let category = "";
+
+    if (bmi < 18.5) {
+        category = "Underweight";
+    } 
+    else if (bmi >= 18.5 && bmi < 25) {
+        category = "Normal";
+    } 
+    else if (bmi >= 25 && bmi < 30) {
+        category = "Overweight";
+    } 
+    else {
+        category = "Obese";
+    }
+
+    alert("BMI = " + bmi.toFixed(2) + "\nCategory: " + category);
+}
+</script>
+
+</body>
+</html>

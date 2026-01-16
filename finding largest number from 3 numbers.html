@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Largest Number</title>
+</head>
+<body>
+
+
+
+<script>
+{
+    let a = parseFloat(prompt("Enter first number:"));
+    let b = parseFloat(prompt("Enter second number:"));
+    let c = parseFloat(prompt("Enter third number:"));
+
+    let big;
+
+    if (a >= b && a >= c) big = a;
+    else if (b >= a && b >= c) big = b;
+    else big = c;
+
+    alert("Largest Number = " + big);
+}
+</script>
+
+</body>
+</html>
